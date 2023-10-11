@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 垂直居中對齊 */
+  padding: 2% 5% 0% 5%;
+  position: relative; /* 添加相對定位 */
+  z-index: 99;
+}
+
+.header-left {
+  display: flex; /* 使用 Flexbox */
+  align-items: center; /* 垂直居中對齊 */
+}
+
+.header-left a{
+  margin: 0; /* 清除段落的預設邊距 */
+  color: inherit;
+  font-size: 32px;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+
+/* Reset default margin and padding */
+ul {
+  margin: 0;
+  padding: 0;
+}
+.menu-button {
+  display: flex; /* 使用 Flexbox */
+  align-items: center; /* 垂直居中對齊 */
+}
+
+button a {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: -200px;
+  height: 100px;
+  width: 100%;
+  border: 5px;
+  background-color: white;
+  transition: ease .8s; /* 添加過渡效果 */
+  z-index: 98;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+}
+
+.open .menu {
+  transform: translateY(300px);
+}
+
+nav > ul {
+  background-color: rgb(255, 255, 255);
+  list-style: none;   /* 移除項目符號 */
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+
+nav a {
+  color: inherit; /* 移除超連結顏色 */
+  display: block; /* 讓 <a> 填滿 <li> */
+  font-size: 30px;
+  padding: 30px;
+  text-decoration: none;  /* 移除超連結底線 */
+  border: 5px white solid;
+  font-weight: bold;
+}
+
+.flex-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.main {
+  width: 100%;
+  background-color: rgb(255, 255, 255); /* 背景 */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .asset-container {
+  /*background-color: rgb(147, 139, 155); /* 各組背景 */
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+.asset-container .asset-container-horizontal1 {
+  padding: 0% 2% 0% 4%;
+  display: flex;
+  justify-content: center;
+  width: 57.15%;
+}
+
+.asset-container .asset-container-vertical1 {
+  padding: 0% 4% 0% 2%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 42.85%;
+  gap: 50px;
+}
+
+.asset-container .asset-container-horizontal2 {
+  padding: 1.5% 4% 0% 2%;
+  display: flex;
+  justify-content: center;
+  width: 57.15%;
+}
+
+.asset-container .asset-container-vertical2 {
+  padding: 1.5% 2% 0% 4%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 42.85%;
+  gap: 50px;
+}
+
+.bk-mid-frame{
+  background-color: rgb(236, 238, 243);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bk-full-frame {
+  background-color: rgb(236, 238, 243);
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding: 30px ;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bk-mid-frame img {
+  max-width: 100%; /* 確保圖像不會超出容器 */
+  max-height: 100%; /* 確保圖像不會超出容器 */
+}
+
+.bk-mid-frame img {
+  max-width: 100%; /* 確保圖像不會超出容器 */
+  max-height: 100%; /* 確保圖像不會超出容器 */
+}
+
+.bk-full-frame img {
+  max-width: 100%; /* 確保圖像不會超出容器 */
+  max-height: 100%; /* 確保圖像不會超出容器 */
+}
+
+/* .bk-mid-frame:hover{
+  opacity: 0.8;
+}
+
+.bk-full-frame:hover{
+  opacity: 0.8;
+} */
+
+.bk-mid-frame:hover .overlay{
+  opacity: 0.8;
+}
+
+.bk-full-frame:hover .overlay{
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(236, 238, 243);
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  height: auto;
+  width: 100%;
+  padding: 3% 0% 2% 0%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-left {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}

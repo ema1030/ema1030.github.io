@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 垂直居中對齊 */
+  padding: 2% 5% 0% 5%;
+  position: relative; /* 添加相對定位 */
+  z-index: 99;
+}
+
+.header-left {
+  display: flex; /* 使用 Flexbox */
+  align-items: center; /* 垂直居中對齊 */
+}
+
+.header-left a{
+  margin: 0; /* 清除段落的預設邊距 */
+  color: inherit;
+  font-size: 32px;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+#banner {
+  background-image: url("pic_portra/africa.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  width: 100%;
+  height: 1100px;
+}
+
+h1 {
+  color: MidnightBlue;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Gadget, sans-serif;
+}
+
+#banner .content h1 {
+  border: solid 5px MidnightBlue;
+  position: relative;
+  top: 200px;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+#gameboard {
+  position: relative;
+  text-align: center;
+  top: 60px;
+}
+
+.card {
+  display: inline-block;
+  height: 250px;
+  margin: 5px 5px;
+  padding: 10px auto;
+  text-align: center;
+  width: 500px;
+}
+
+.card:hover {
+
+  cursor: url('film_pic/50d.png'), default !important;
+}
+
+.card img {
+  width: 500px;
+  height: auto;
+}
+
+nav {
+  padding-top: 60px;
+}
+
+nav > ul {
+    background-color: white;
+    list-style: none;   /* 移除項目符號 */
+    margin: 0;
+    padding: 0;
+    color: MidnightBlue;
+    font-weight: bold;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+
+nav a {
+    color: inherit; /* 移除超連結顏色 */
+    display: block; /* 讓 <a> 填滿 <li> */
+    font-size: 30px;
+    padding: 30px;
+    text-decoration: none;  /* 移除超連結底線 */
+    border: 5px MidnightBlue solid;
+    font-weight: bold;
+}
+
+/* 滑鼠移到 <a> 時變成深底淺色 */
+nav li:hover {
+    background-color: MidnightBlue;
+    color: white;
+}
+
+.flex-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer {
+  display: flex;
+  height: auto;
+  width: 100%;
+  padding: 3% 0% 2% 0%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-left {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
