@@ -76,7 +76,6 @@ h1 {
 }
 
 .card:hover {
-  opacity: 0.8;
   cursor: url('film_pic/provia100f.png'), default !important;
 }
 
